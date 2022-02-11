@@ -55,7 +55,7 @@ export class PlansComponent implements OnInit {
   coverers: any;                                    // the coveres are the MDs in the same SERVICE as goAwayer
   vacEdit: any;                                     // data for the EditVac boxes 
   showEdit: boolean = false;
-  showAcceptance: boolean = false; 
+  showAcceptance: boolean = true; 
   dayArray = [[]]                                  // make the boxes BEFORE and BETWEEN and TILL_END of timeAways 
   calDates: Date[] = Array();                       // for filling out the calendar and making the TODAY stiled boxes
   reasonArr = ['null', 'Personal Vacation','Meeting','Health', 'Other']
@@ -351,7 +351,7 @@ private saveEdits(ev, detail?) {
       this .getTheData();                                           // refresh the data to show the edits. 
   })
 this .changesSavedShow = true;
-  this .showAcceptance = false; 
+ // this .showAcceptance = false; 
  // this .ngOnInit();
 
 }
@@ -709,7 +709,7 @@ WTMparam(ev, pName){
     this .tAparams.WTMchange = ev.checked ? 1 : 0
   if (pName == 'WTM_Self'){
     this .tAparams.WTM_self = 1
-    
+
     if (this .showError == 5)
       this .showError  = 0;
   }
